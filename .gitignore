@@ -1,0 +1,13 @@
+.DS_Store
+
+# Ignore Jekyll metadata
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+_drafts/
+
+# Ignore Bundler files
+.bundle/
+vendor/
