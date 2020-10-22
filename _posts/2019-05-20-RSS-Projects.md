@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Test Title
+title: Autonomous Vehicle Control, Planning, and Localization
 category:
   - Projects
 tags:
-  - Chemistry
-  - Electrical Engineering
-  - Microcontrollers
+  - Robotics
+  - Teamwork 
 ---
 
 A colorimeter is a device that measures the absorbance of a particular wavelength of a solution. In chemical applications this information is useful for non-invasively determining the concentration of a solution and monitoring the progress of a reaction. For my high school digital electronics final project, I decided to build one myself using off-the-shelf components.
