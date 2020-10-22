@@ -1,42 +1,16 @@
 ---
 layout: post
-title: Circuitry for Cheap Brackish Water Desalination
-# excerpt: "I developed a cheap circuit and feedback system for powering a brackish water desalination system for developing populations.  This project happened with the MIT GEAR Lab"
-# categories:
-#   - Projects
+title: Four Color Carnation
 tags:
-  - Curcuit Design
-  - Control Systems
+  - Just for Fun
 ---
-<div class="message">
-This writeup is currently under development. Check back for more updates soon!
-</div>
 
-As part of MIT's Campus Preview Weekend for potential students, I designed a circuit board that students would assemble at an event promoting one of our student groups called Next Make (see the [Electric Piano]({% link _posts/2018-04-14-electric-piano.md %}) project for more details). This year, we created a board that would measure the audio volume of the room and display it on an LED bar graph.
+I got a white carnation from our high school's Valentine's Day celebration, and I thought it would be interesting to try the experiment in which the flower is placed in colored water to try and change the color of its petals.
 <!--more-->
+As an extension, I split the stem into four parts and dipped each into a different colored solution. Here are the results:
 
-## Existing Solutions
-
-Monolithic solutions exist for this particular type of project, namely the LM3914 and LM3916, which accept an analog voltage and drive an LED bar graph directly. It does this with a flash-ADC-style resistor ladder along with a series of comparators to sense voltage levels. However, with the rise of low-cost microcontrollers, these ICs have been discontinued. In fact, sourcing them is rather expensive and relies on the remaining stashes that people have rather than from the original manufacturer. Thus, we decided to use a microcontroller in lieu of a more packaged solution.
-
-## Part Selection
-
-### Microphone
-
-We opted to use a standard electret microphone along with an amplifier to sense the noise levels in the room. The only real parameters we are looking for in this part is cost and size.
-
-### Amplifier
-
-The amplitude of the signal from the electret microphone, even after the built-in JFET amplifier, is around 2 mV. Thus we needed approximately a 1000x amplification to produce voltages that the microcontroller could detect. We selected a general-purpose low-power op-amp, namely the LM358, to perform the amplification. We purposely selected a dual op-amp in anticipation of creating a cascading amplifier for better bandwidth. As explained later, we eventually found this to be unnecessary.
-
-### LED Bar Graph
-
-An LTA-1000HR red, 10-segment LED Bar Graph was selected as the display.
-
-## Circuit
-
-The circuit consisted of a microphone feeding into an inverting amplifier. This signal is read by the Attiny which controls the LED bar graph. The Attiny also had the programming pins broken out to 6 test points on the board to use the chip's ISP feature.
-
-## Code
-
-The code polls the ADC periodically to sense the amplitude of the sound. While this does not provide the actual amplitude, it is sufficient for a basic product like this one. The full source code can be found on [Github](https://github.com/Next-Make/CPW2019).
+<div class="center">
+    <img src="/assets/img/carnation/carnation1.jpg" alt="Initial carnation setup" class="three-image-row">
+    <img src="/assets/img/carnation/carnation2.jpg" alt="Resulting carnation" class="three-image-row">
+</div>
+*Carnation setup (left). Results after 4 days (right).*
