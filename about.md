@@ -6,14 +6,11 @@ sidebar_link: true
 
 I am a undergraduate student from Albuquerque, New Mexico pursuing a [Bachelors of Science in Electrical Engineering and Computer Science](https://www.eecs.mit.edu/academics-admissions/undergraduate-programs/course-6-2-electrical-eng-computer-science) at [MIT](http://web.mit.edu/). I primarily focus in robotics and autonomous systems, and have a passion for solving problems that exists at the endge between fields.  While I specialize in inference and control, I have experience in planning, perception, electronics, and singal processing.  
 
-Some of my hobbies include card magic, running, and biking. In my free time, I also enjoy teaching and science education pursuits. During my time as an undergraduate, I helped [MIT Club Chem](http://web.mit.edu/clubchem/www/) put on chemistry demonstrations for the community. I also teach classes such as organic chemistry and introductory electronics to high school students through the [MIT Educational Studies Program (ESP)](https://esp.mit.edu/learn/index.html). In addition, I help run the [MIT Science Olympiad Invitational](https://scioly.mit.edu) each year.
+Some of my hobbies include hiking, creating languages (human languages, not coding), and acting (mostly in student films). I also am a "peer mentor" to freshmen in my living group at MIT.  This means I am specifically trained and designated to be at touchpoint for new students having personal or academic struggles, or just need to talk.  Giving back to this community that I cherish has been among the most important personal experiences of my college career.  
 
 ## Contact
 
-Did you find something on here interesting? Found a mistake? Want to give feedback or extend a project? I'd love to hear about it! You can find me at the links below:
-
-* Email: [milesdai@mit.edu](mailto:milesdai@mit.edu)
-* Github: <https://github.com/milesdai>
+Did you find something on here interesting? Found a mistake? Want to give feedback or extend a project? I'd love to hear about it! You can contact me at [alexcuel@mit.edu](mailto:alexcuel@mit.edu). 
 
 I do read all emails that get sent to me, but due to the all-consuming nature of being a student, I do not always have the chance to respond in a timely manner.
 
