@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Four Color Carnation
+title: Circuitry Design for Ceap Water Desalination
+category:
+  - Projects
 tags:
   - Just for Fun
 ---
