@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Low Cost Colorimeter
+title: Test Title
 category:
   - Projects
 tags:
