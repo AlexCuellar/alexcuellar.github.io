@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Circuitry for Cheap Brackish Water Desalination
-excerpt: "I developed a cheap circuit and feedback system for powering a brackish water desalination system for developing populations.  This project happened with the MIT GEAR Lab"
+# excerpt: "I developed a cheap circuit and feedback system for powering a brackish water desalination system for developing populations.  This project happened with the MIT GEAR Lab"
 categories:
   - Projects
 tags:
