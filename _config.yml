@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Alex Cuellar
 tagline:
-description:      EECS With a focus in Robotics and Autonomous Systems
+description:      EECS Focusing in Robotics and Autonomous Systems
 url:              ''
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
