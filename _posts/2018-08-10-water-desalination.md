@@ -4,7 +4,8 @@ title: Circuitry Design for Ceap Water Desalination
 category:
   - Projects
 tags:
-  - Just for Fun
+  - Controls
+  - Circuits
 ---
 
 I got a white carnation from our high school's Valentine's Day celebration, and I thought it would be interesting to try the experiment in which the flower is placed in colored water to try and change the color of its petals.
