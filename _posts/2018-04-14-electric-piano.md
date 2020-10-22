@@ -1,8 +1,6 @@
 ---
 layout: post
 title: Electric Piano
-categories:
-  - Projects
 excerpt: "A small PCB electric piano for MIT's Campus Preview Weekend<br>"
 tags:
   - PCB Design
