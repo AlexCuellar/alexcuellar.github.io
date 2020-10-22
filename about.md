@@ -17,11 +17,3 @@ Did you find something on here interesting? Found a mistake? Want to give feedba
 
 I do read all emails that get sent to me, but due to the all-consuming nature of being a student, I do not always have the chance to respond in a timely manner.
 
-## Disclaimer
-
-The projects on this site are presented as-is, without any guarantees about safety or reproducibility. Some of them are legitimately very dangerous without prior knowledge and safety precautions. They can involve hazardous chemicals[^1] [^2] [^3] and high voltages[^4]. I try to give warnings, but please note that *there is not enough information given to replicate these projects safely. At the end of the day, your safety is your own responsibility*.
-
-[^1]: [Methylsalicylate Synthesis]({% link _posts/2016-07-03-methylsalicylate.md %})
-[^2]: [Copper Sulfate Methanol Flame Test]({% link _posts/2016-08-01-copper-sulfate-methanol-flame.md %})
-[^3]: [Circuit Board Etching]({% link _posts/2016-04-30-circuit-board-etching.md %})
-[^4]: [Induction Heater]({% link _posts/2018-12-17-induction-heater.md %})
