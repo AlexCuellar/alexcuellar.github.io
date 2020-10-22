@@ -4,6 +4,7 @@ title: Electric Piano
 excerpt: "A small PCB electric piano for MIT's Campus Preview Weekend<br>"
 tags:
   - PCB Design
+  - Test tag
   - Electrical Engineering 
 ---
 
