@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Alex Cuellar
+title:            Alex C Cuellar
 tagline:
 description:      EECS Focusing in Robotics and Autonomous Systems
 url:              ''
@@ -15,7 +15,7 @@ baseurl:          ''
                   # sidebar_blog_link below.
 
 author:
-  name:           'Alex Cuellar'
+  name:           'Alex C Cuellar'
   url:            https://alexcuellar.github.io
 
 paginate:         5
