@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Electric Piano
-excerpt: "A small PCB electric piano for MIT's Campus Preview Weekend<br>"
+title: Human Motion Prediction
+excerpt: "Development and testing an algorithm to predict motions of a human collaborator with the MIT Interaction Lab<br>"
 tags:
-  - PCB Design
-  - Test tag
-  - Electrical Engineering 
+  - Machine Learning
+  - Algorithms
 ---
 
 MIT hosts an annual event called Campus Preview Weekend (CPW) for admitted students in April. During this event, student groups across campus will put on events to entice the pre-frosh to come to MIT (and maybe even join their group). In my dorm, Next House, I lead a student group called Next Make in which a group of people interested in electrical and mechanical projects come together to work on a project in their spare time. Next Make hosts a "Solder Your Own Circuit Board" event during CPW in which the club members design a PCB and have the pre-frosh come solder components to the board. Afterwards, they can take home a nice little PCB that they put together.

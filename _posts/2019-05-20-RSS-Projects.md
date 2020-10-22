@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Autonomous Vehicle Control, Planning, and Localization
+exerpt: "Semester-long endevor to develop a robust automomous system on a small Autonomous Vehicle in small teams.  This work was part of the MIT class 6.141 (Robotics: Sicence and Systems."
 category:
   - Projects
 tags:

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: VU Meter
+title: Circuitry for Cheap Brackish Water Desalination
+excerpt: "I developed a cheap circuit and feedback system for powering a brackish water desalination system for developing populations.  This project happened with the MIT GEAR Lab"
 categories:
   - Projects
 tags:
-  - Microcontrollers
-  - Electrical Engineering
-  - PCB Design 
+  - Curcuit Design
+  - Control Systems
 ---
 <div class="message">
 This writeup is currently under development. Check back for more updates soon!
