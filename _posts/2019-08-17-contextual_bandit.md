@@ -26,9 +26,13 @@ While past research has studied subsets of these augmentations to the bandit alg
 A significant portion of our paper was dedicated to the theoretical formalism and guarantees of our algorithm.  While I don't want to go into too much of the math here, I would like to briefly mention the major points.  
 
 ### Algorithm Formulation
-Our algorithm was based on the FTRL (Follow the Regularized Leader) algorithm.  FTRL makes it's choice by optimizing over whichever option has maximized reward in the past (in our example this would be the employee who gets best survey results) plus a "regularization" term, or number which describes how many times a particular option has been chosen.  The purpose of the regularizer is to make sure that all options have been tried enough times to get a decent sense of what kinds of results we can expect (i.e. how good their survey results are likely to be).  Written out more formally, our optimization looks like: 
+Our algorithm was based on the FTRL (Follow the Regularized Leader) algorithm.  FTRL makes it's choice by optimizing over a probability distribution among the available choices favoring those that have done well in the past plus a "regularization" term, or number which describes how many times a particular option has been chosen previously.  The purpose of the regularizer is to make sure that all options have been tried enough times to get a decent sense of what kinds of results we can expect (i.e. how good their survey results are likely to be).  Written out more formally, our optimization looks like: 
 \$\$P_{t} = argmin_{P \in \Omega} \sum_{s=1}^{t-1} \langle p^{j_s}, \hat{l_s} \rangle + \frac{1}{\eta}\sum_{j=1}^M \sum_{i=1}^K \psi(p^j(i))\$\$
-Where  \\(\hat{l_s}\\)
+Where  \\(\hat{l_s}\\) is the estimator of how well various options have done in the past, \\(P\\) is a probability distribution over choosing any particular option, \\(\eta\\) is the learning rate, and \\(K\\) and \\(M\\) are the numbber of optoins and contexts respectively.  
+
+### Optimality guarantees
+
+The theoretical guarantees of bandit algortihms are measured with a metric known as *regret*.  Basically, regret is how much good an algorithm missed out by not making the optimal choice every single time.  The lower regret, the better.  We were able to prove that our algorithm guarantees an expected regret upper bounded by \$\$ O(\sqrt{TMK \ln K}) \$\$.  This regret bound is on par for adversarial bandit algorithms (adversarial is another aspect of bandit algorithms chosen during our work.  I didn't discuss it because it gives less insight into our goals for the project.  Read the paper for more details if you are interested)
 
 
 <div class="center">
