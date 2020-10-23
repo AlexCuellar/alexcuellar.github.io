@@ -3,6 +3,7 @@ layout: post
 title: Fair Contextual Bandit Algorithm
 category:
   - Projects
+exerpt: Developing an algorithm that helps robots delegate tasks to humans.
 tags:
   - Machine Learning
   - Algorithms
