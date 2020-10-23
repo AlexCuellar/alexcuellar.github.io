@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Induction Heater
-categories:
-  - Projects
-excerpt: An induction heater with a MOSFET totem pole topology.<br><br>
 tags:
   - Electrical Engineering
   - Microcontrollers
