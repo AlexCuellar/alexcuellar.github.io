@@ -27,7 +27,9 @@ A significant portion of our paper was dedicated to the theoretical formalism an
 
 ### Algorithm Formulation
 Our algorithm was based on the FTRL (Follow the Regularized Leader) algorithm.  FTRL makes it's choice by optimizing over whichever option has maximized reward in the past (in our example this would be the employee who gets best survey results) plus a "regularization" term, or number which describes how many times a particular option has been chosen.  The purpose of the regularizer is to make sure that all options have been tried enough times to get a decent sense of what kinds of results we can expect (i.e. how good their survey results are likely to be).  Written out more formally, our optimization looks like: 
-\$\$p_t^j = \argmin_{p \in \Delta_K} \sum_{s: j_s = j}\inner{p, \hat{l_s}} + \frac{1}{\eta}\sum_{i=1}^K \psi(p(i))\$\$
+\$\$P_{t} = \argmin_{P \in \Omega} \sum_{s=1}^{t-1} \inner{p^{j_s},\hat{l_s}}\$\$
+Where  \\(\hat{l_s}\\)
+
 
 <div class="center">
     <img src="/assets/img/carnation/carnation1.jpg" alt="Initial carnation setup" class="three-image-row">
