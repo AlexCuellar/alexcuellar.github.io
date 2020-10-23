@@ -12,7 +12,7 @@ tags:
 ## Overview
 In the summer of 2019, after my Sophomore year, I worked as an undergraduate researcher with the University of Souther California REU (Reserach Experiences for Undergraduates) program.  During this time, I worked under Prof. Stefanos Nikolaidis at the ICAROS (Interactive and Calaborative Autonomous Robotic Systems Lab) to develop the the first fair online contextual bandit algorithm for use in human-robot or human-computer interaction.  Our research eventually developed into a paper [^1] accepted to the UAI (Uncertinty in AI) conference and as an extened abstract to AAMAS (Autonomous Agents and Multi-Agent Systems).  So what exacly is a fair online contectual bandit algorithm? Bandit algorithms are a fundamental class of reinforcement learning algorithms which learn the optimal action to take given a set of \\(n\\) finite options for an action.  For example, imagine a customer service robot needs to refer customers to an employee to solve a problem, which employee is the best choice to maximize the score that customers give in a feedback survey.  
 
-## Why is Our Algorithm New?
+## How is Our Algorithm New?
 While bandit algorithms are extremely well-studied, we decided to augment the fundamental algorithm in order to make it most useful for cases of human-robot interaction.  These augmentations involved making it online, contexutaul, and fair.  Let's take a look at what these atumentations mean and why they may be importnat for our particular setting.  
 
 * **Online:** Most machine learning algorithms require loads of data to train on before deployment, online algorithms are created in such a way as to mantain theoretical guarantees in optimality while leaning everything it knows on the fly.  To understand what this means, let's go back to example of the customer service bot.  Most algorithms would give the bot mountains of data to train on for figuring out which employee is the best choice.  However, a bot fitted with an oline algorithm starts knowing nothing, and learns through experience.  While this may seem like a terrible idea (and indeed this algorithm performs much worse than an offline algorithm in the early stages) as the bot serves more and more people, the error of these algortihms still have comfotable bounds *without* the need to rake together tons of data before deployment.  
@@ -30,16 +30,15 @@ Our algorithm was based on the FTRL (Follow the Regularized Leader) algorithm.  
 \$\$P_{t} = argmin_{P \in \Omega} \sum_{s=1}^{t-1} \langle p^{j_s}, \hat{l_s} \rangle + \frac{1}{\eta}\sum_{j=1}^M \sum_{i=1}^K \psi(p^j(i))\$\$
 Where  \\(\hat{l_s}\\) is the estimator of how well various options have done in the past, \\(P\\) is a probability distribution over choosing any particular option, \\(\eta\\) is the learning rate, and \\(K\\) and \\(M\\) are the numbber of optoins and contexts respectively.  
 
-### Optimality guarantees
+### Optimality Guarantees
 
-The theoretical guarantees of bandit algortihms are measured with a metric known as *regret*.  Basically, regret is how much good an algorithm missed out by not making the optimal choice every single time.  The lower regret, the better.  We were able to prove that our algorithm guarantees an expected regret upper bounded by \$\$ O(\sqrt{TMK \ln K}) \$\$.  This regret bound is on par for adversarial bandit algorithms (adversarial is another aspect of bandit algorithms chosen during our work.  I didn't discuss it because it gives less insight into our goals for the project.  Read the paper for more details if you are interested)
+The theoretical guarantees of bandit algortihms are measured with a metric known as *regret*.  Basically, regret is how much good an algorithm missed out by not making the optimal choice every single time.  The lower regret, the better.  We were able to prove that our algorithm guarantees an expected regret upper bounded by \$\$ O(\sqrt{TMK \ln K}) \$\$
+This regret bound is on par for adversarial bandit algorithms. ("adversarial" is another aspect of bandit algorithms chosen during our work.  I didn't discuss it because it gives less insight into our goals for the project than the augmentations described above.  Read the paper for more details if you are interested)
 
+## User Study
+To show that our alogrithm works to improve results during human interaction, we tested our algorithm against a similar non-contextual algorithm posed previously by ICAROS lab [^2].  In this user study, we recuited workers from the USA and India on Amazon Mechanical Turk to take a test.  Questions would be broken up into 2 contexts (USA-related quesetions and India-related questions).  Participants took one test with the contextual algorithm and one with the non-contextual algortihm (with randomized ordering on which came first) and answered questions at the end as to how fair they felt the algorithm was.  Ultimately we had positive results.  We showed that the contextual algorithm performed better in overall number of questions answered correctly, especially when the difference in ability betwen contexts for each player was especially high (a measure we coined as *disparity*): 
 
-<div class="center">
-    <img src="/assets/img/carnation/carnation1.jpg" alt="Initial carnation setup" class="three-image-row">
-    <img src="/assets/img/carnation/carnation2.jpg" alt="Resulting carnation" class="three-image-row">
-</div>
-*Carnation setup (left). Results after 4 days (right).*
+Moreover, the contextual algorithm didn't decrease how fair the participants felt the choices were:
 
 ## Footnotes
 [^1]: Yifang Chen, Alex Cuellar, Haipeng Luo, Jignesh Modi, Heramb Nemlekar, and Stefanos Nikolaidis. Fair contextual multi-armed bandits: Theory and experiments. arXiv preprint arXiv:1912.08055, 2019.
