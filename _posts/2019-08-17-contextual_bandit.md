@@ -12,7 +12,7 @@ tags:
 ## Overview
 In the summer of 2019, after my Sophomore year, I worked as an undergraduate researcher with the University of Souther California REU (Reserach Experiences for Undergraduates) program.  During this time, I worked under Prof. Stefanos Nikolaidis at the ICAROS (Interactive and Calaborative Autonomous Robotic Systems Lab) to develop the the first fair online contextual bandit algorithm for use in human-robot or human-computer interaction.  Our research eventually developed into a paper [^1] accepted to the UAI (Uncertinty in AI) conference and as an extened abstract to AAMAS (Autonomous Agents and Multi-Agent Systems).  So what exacly is a fair online contectual bandit algorithm? Bandit algorithms are a fundamental class of reinforcement learning algorithms which learn the optimal action to take given a set of \\(n\\) finite options for an action.  For example, imagine a customer service robot needs to refer customers to an employee to solve a problem, which employee is the best choice to maximize the score that customers give in a feedback survey.  A bandit algorithm will try do figure out which employee will be the best choice and choose them most often.  
 
-![Depiction of Bandit Algorithm](/assets/img/Fair_Bandit/Bandit_Algorithm_Depiction.JPG)
+![Depiction of Bandit Algorithm](/assets/img/Fair-Bandit/Bandit_Algorithm_Depiction.JPG)
 *Figure 1: Simple diagram of the way a bandit algorithm may choose one best option (the middle person) Over the others.*
 
 ## How is Our Algorithm New?
