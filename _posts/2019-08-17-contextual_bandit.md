@@ -41,7 +41,11 @@ This regret bound is on par for adversarial bandit algorithms. ("adversarial" is
 ## User Study
 To show that our alogrithm works to improve results during human interaction, we tested our algorithm against a similar non-contextual algorithm posed previously by ICAROS lab [^2].  In this user study, we recuited workers from the USA and India on Amazon Mechanical Turk to take a test.  Questions would be broken up into 2 contexts (USA-related quesetions and India-related questions).  Participants took one test with the contextual algorithm and one with the non-contextual algortihm (with randomized ordering on which came first) and answered questions at the end as to how fair they felt the algorithm was.  Ultimately we had positive results.  We showed that the contextual algorithm performed better in overall number of questions answered correctly, especially when the difference in ability betwen contexts for each player was especially high (a measure we coined as *disparity*): 
 
+![Correct Answer Results](/assets/img/Fair-Bandit/Correct_Answer_Results.JPG)
+
 Moreover, the contextual algorithm didn't decrease how fair the participants felt the choices were:
+
+![Fairness Results](/assets/img/Fair-Bandit/Fairness_Results.JPG)
 
 ## Footnotes
 [^1]: Yifang Chen, Alex Cuellar, Haipeng Luo, Jignesh Modi, Heramb Nemlekar, and Stefanos Nikolaidis. Fair contextual multi-armed bandits: Theory and experiments. arXiv preprint arXiv:1912.08055, 2019.
