@@ -18,7 +18,9 @@ Many groundwater resources around the world are categorized as backish -- too sa
 </div> -->
 
 ![Desalination Setup](/assets/img/Water-Desalination/Desalination-Setup.jpg)
+*Figure 1: Picture of GEAR LAB's Electrodialysis Desalination setup.  The top row has the diluate and concentrate sources, and the bottom level houses pumps and the elecrodialysis stack itself.*
 ![Electrodialysis Diagram](/assets/img/Water-Desalination/Electrodialysis-Diagram.jpg)
+*Figure 2: Diagram of Electrodialysis.*
 
 ## My contribution
 
@@ -32,7 +34,9 @@ Early on, I attempted methods of mantaining a DC voltage to the stack.  I used a
 </div> -->
 
 ![Circuit Diagram](/assets/img/Water-Desalination/Circuit-Diagram.png)
+*Figure 3: Diagram of the final circuit*
 ![Circuit Setup](/assets/img/Water-Desalination/Circuit-Setup.jpg)
+*Figure 4: picture of breadboard in final circuit setup for testing.*
 
 In order to determine the desired PWM signal to the BUZ11, I used an Arduino Uno and EZO-EC salinity probe to calculate a desired current.  Then, using a simple resistance divider to drop down the voltage signal coming off the desalination stack, I calculated the current through the system.  This measured current informed a simple proportional feedback system tuning the PWM duty cycle to match the desired current.  
 
