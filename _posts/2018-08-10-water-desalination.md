@@ -12,10 +12,13 @@ tags:
 
 Many groundwater resources around the world are categorized as backish -- too salty to drink but not salty enough to be considered pure salt-water.  This lower level of salinity makes purifying brakishwater easier than salt water, and is therefore a common point focus of research for water security in the developing world.  In 2018, I worked as part of a project with the MIT GEAR (Global Engineering and Research) Lab to improve home-use elecrodialysis desalination devices.  Such devices pump water between parallel sheets of material which only alow cations or anions to pass through.  When a voltage is applied to the systems, the anions and cations create a current by traveling between these pieces of material.  With proper layering, the system results in 2 separate water sources, one diluate (from which ions were pulled) and concentrate (into which ions were deposited).  This process is a balancing act: too little voltage means the process is incrediby slow, but too high a voltage will result in water breaking into hydrogen and hydroxide ions, resulting in dangerously acidic and basic water.  GEAR lab's mission was investigating the optimal way to ride this line as the water gets less and less salty.  
 
-<div class="center">
+<!-- <div class="center">
     <img src="/assets/img/Water-Desalination/Desalination-Setup.jpg" alt="Desalination Setup" class="three-image-row">
     <img src="/assets/img/Water-Desalination/Electrodialysis-Diagram.jpg" alt="Electrodialysis Diagram" class="three-image-row">
-</div>
+</div> -->
+
+![Desalination Setup](/assets/img/Water-Desalination/Desalination-Setup.jpg)
+![Electrodialysis Diagram](/assets/img/Water-Desalination/Electrodialysis-Diagram.jpg)
 
 ## My contribution
 
