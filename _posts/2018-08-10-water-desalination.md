@@ -24,8 +24,8 @@ My contribution to this project was not related to the actual desalination proce
 Early on, I attempted methods of mantaining a DC voltage to the stack.  I used a BUZ11 MOSFET with PWM to produce an square-wave signal of the necessary voltage, and then used a buck converter convert back to DC.  However, it turned out that the desalination stack worked fine with the unfiltered PWM signal.  As a result, the circut simplified futher to the final form seen below.  
 
 <div class="center">
-    <img src="/assets/img/Water-Desalination/Circuit-Setup.jpg" alt="Circuit Diagram" class="three-image-row">
-    <img src="/assets/img/Water-Desalination/Circuit-Diagram.jpg" alt="Circuit Setup" class="three-image-row">
+    <img src="/assets/img/Water-Desalination/Circuit-Setup.jpg" alt="Circuit Setup" class="two-image-row">
+    <img src="/assets/img/Water-Desalination/Circuit-Diagram.png" alt="Circuit Diagram" class="two-image-row">
 </div>
 
 In order to determine the desired PWM signal to the BUZ11, I used an Arduino Uno and EZO-EC salinity probe to calculate a desired current.  Then, using a simple resistance divider to drop down the voltage signal coming off the desalination stack, I calculated the current through the system.  This measured current informed a simple proportional feedback system tuning the PWM duty cycle to match the desired current.  
