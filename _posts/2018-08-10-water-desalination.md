@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Circuitry Design for Ceap Water Desalination
+excerpt: Design of circuitry and feedback system for electrodialysis desalination system.<br><br>
 category:
   - Projects
 tags:
