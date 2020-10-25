@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Autonomous Vehicle Control, Planning, and Localization
+excerpt: Building an autonomous vehicle system from the ground up using ROS.<br><br>
 category:
   - Projects
 tags:
@@ -8,12 +9,6 @@ tags:
   - Teamwork 
 ---
 
-I got a white carnation from our high school's Valentine's Day celebration, and I thought it would be interesting to try the experiment in which the flower is placed in colored water to try and change the color of its petals.
-<!--more-->
-As an extension, I split the stem into four parts and dipped each into a different colored solution. Here are the results:
+Meet CARl, the autonomous vehicle setu for the labs and final project of the MIT class 6.141 Robotics: Science and systems.  
 
-<div class="center">
-    <img src="/assets/img/carnation/carnation1.jpg" alt="Initial carnation setup" class="three-image-row">
-    <img src="/assets/img/carnation/carnation2.jpg" alt="Resulting carnation" class="three-image-row">
-</div>
-*Carnation setup (left). Results after 4 days (right).*
+CARl has a on onboard CPU, LIDAR, and RGB camera for navigating the world around it.  The class involved several cumulative labs which built from low-level control systems to localization and motion planning.  Our team developed a website with detailed lab writups if you are interested in in depth explanations of our procecess.  However, I will give a high level overview of our process and results here.  
