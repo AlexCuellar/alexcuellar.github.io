@@ -18,7 +18,7 @@ CARl has a on onboard CPU, Hokuyo LIDAR, and RGB camera for navigating the world
 Lab 3 focused on developing lower-level controls and safety systems to prevent the car from crashing.  To test these, we implemented a basic wall follower which uses the LIDAR data to mantain desired distance from a wall.  Our control system centered on Pure Persuit control -- a scheme which uses the basic dynamics of the vehicle's searing constraints to choose the angle of front wheels to reach a certain desired point ahead of it.  
 
 In order to make use of this basic framework, we used lidar data to fit a line to the wall we are attempting to follow.  From this line, we define our goal point to be the desired distance from the wall and a certain distance ahead of CARl.  While this scheme worke well during straight aways, the car tended to react slowly to oncoming corners to walls.  Therefore, we defined a "spacial derivative" \\(dL/dt\\) metric for how the car's distance to a wall at various angles changes.  Using this information, we could predict and react to turns more smoothly by multiplying the slope of our line of best fit by a gain proportional to this derivative.  
-![Spacial Derivative Diagram](/assets/img/RSS/Wall_Follower_Derivative.JPG)
+![Spacial Derivative Diagram](/assets/img/RSS/Wall_Follwer_Derivative.JPG)
 *Figure 1: A diagram depicting our \\(dL/dt\\) metric.  On the left is a "concave corner" with a negative derivative.  This  would pull or line of best fit closer to the car and engourage an earlier turn.  On the right is a "convex corner" with a positive derivative.  This would push the line to point more a way from the direction of the car and encourage the car to begin turning earlier.*
 
 ## Lab 4: Computer Vision
