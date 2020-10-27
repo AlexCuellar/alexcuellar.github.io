@@ -33,5 +33,5 @@ My modeling the prediction with a markov-like structure and breaking down predic
 <!-- ![Prediction Error](/assets/img/Human-Prediction/Prediction_Error.JPG) -->
 <img src="/assets/img/Human-Prediction/Prediction_Error.JPG"
      alt="Prediction error"
-     style="float: center; margin-right: 10px; width: 1119px; height: 619px" />
+     style="float: center; margin-right: 10px; width: 1119px; height: 400px" />
 *Figure 3: Error of our prediction algorithm over many trials.  Since we have no guarantee that the distribution is gaussian, we used median and inter-quartile range to asses the spread of errors in the prediction over time.*
