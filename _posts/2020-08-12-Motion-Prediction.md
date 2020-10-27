@@ -30,5 +30,8 @@ This process leaves one question: how do I make a prediction of the person's sma
 
 My modeling the prediction with a markov-like structure and breaking down predicion into small GPR models, we are able to make predictions one second into the future in an average .07 seconds.  Additionally, we can tell that the prediction is relatively stable by observing that (1) the prediction's error does not blow up as we try to increase the prediction horizon and (2) The distribution of errors does not blow up.  
 
-![Prediction Error](/assets/img/Human-Prediction/Prediction_Error.JPG)
+<!-- ![Prediction Error](/assets/img/Human-Prediction/Prediction_Error.JPG) -->
+<img src="/assets/img/Human-Prediction/Prediction_Error.JPG"
+     alt="Prediction error"
+     style="float: center; margin-right: 10px; width: 10px; height: 10px" />
 *Figure 3: Error of our prediction algorithm over many trials.  Since we have no guarantee that the distribution is gaussian, we used median and inter-quartile range to asses the spread of errors in the prediction over time.*
