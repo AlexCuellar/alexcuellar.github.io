@@ -12,7 +12,7 @@ tags:
 
 Since January, I have been working with the MIT Interaction lab, a research group working to solve various problems in the world of human-robot interaction.  Specifically, I am one part of a larger effort to develop one fully-integrated robotic system able to dynamically learn, predict, and avoid a human working in the same space as the robot.  I work on the prediction side of the project, and more specifically refine the algorithm used to predict one human's path through space given data from many others on the same trajectory.  For example, the lab recently gathered data from participants walking around a map between 6 points moving objects from each point to a drop-off point.  
 
-![Testing Layout](/assets/img/Human-Prediction/Test-Layout.PNG)
+![Testing Layout](/assets/img/Human-Prediction/Test-Layout.png)
 
 My algorithm gathers data clustered into types of trajectories (for example, all paths starting from point 6 and ending at the point 4).  Then, when a person begins walking from point 6 to point 4, my algorithm attempts to complete the trajectory.  This data will help a robot plan more optimally around the likely path of a human collaborator.  
 
