@@ -26,6 +26,10 @@ At a high level, my algorithm iteratively predicts how a person's position will 
 This process leaves one question: how do I make a prediction of the person's small spacial change given an assumed starting point? First, I take the KNN of points from past trajectories relative to our starting point across 4D space (3 spacial dimensions and time relative to the beginning of the trajectory).  From these closest positions, I create a GPR (Gaussian Process Regression) model relating 7 inputs (the point's 3 spacial coordinates, time since start of trajectory, and spacial change between the last timestep and the position under question) to a person's spacial change during the subsequent time-step.  We then feed in the 7 parameters from a start position to guess the spacial change in position over the next time-step. By using the new predicted point as the new starting point, we can string together points into a trajectory as described above.  
 
 ![Prediction](/assets/img/Human-Prediction/Prediction.JPG)
+<img src="/assets/img/Human-Prediction/Prediction.JPG"
+     alt="Prediction"
+     style="float: center; margin-right: 10px; width: 1328px; height: 637px" />
+     <!-- 1328 x 637 -->
 *Figure 2: 3D plot of the algorithm's prediction for a trajectory.  The blue points mark points in space for all previously observed trjectories.  The Green dots show the full ground truth trajectory we are attempting to predict.  The red dots make up the predicted trajectory. Notice that we do not start the prediction at the very beginning of the ground truth trajectory, but let the trajectory play out for several time-steps before beginning a prediction.*
 
 My modeling the prediction with a markov-like structure and breaking down predicion into small GPR models, we are able to make predictions one second into the future in an average .07 seconds.  Additionally, we can tell that the prediction is relatively stable by observing that (1) the prediction's error does not blow up as we try to increase the prediction horizon and (2) The distribution of errors does not blow up.  
