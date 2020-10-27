@@ -25,7 +25,7 @@ At a high level, my algorithm iteratively predicts how a person's position will 
 
 This process leaves one question: how do I make a prediction of the person's small spacial change given an assumed starting point? First, I take the KNN of points from past trajectories relative to our starting point across 4D space (3 spacial dimensions and time relative to the beginning of the trajectory).  From these closest positions, I create a GPR (Gaussian Process Regression) model relating 7 inputs (the point's 3 spacial coordinates, time since start of trajectory, and spacial change between the last timestep and the position under question) to a person's spacial change during the subsequent time-step.  We then feed in the 7 parameters from a start position to guess the spacial change in position over the next time-step. By using the new predicted point as the new starting point, we can string together points into a trajectory as described above.  
 
-![Prediction](/assets/img/Human-Prediction/Prediction.JPG)
+<!-- ![Prediction](/assets/img/Human-Prediction/Prediction.JPG) -->
 <img src="/assets/img/Human-Prediction/Prediction.JPG"
      alt="Prediction"
      style="float: center; margin-right: 10px; width: 1328px; height: 400px" />
