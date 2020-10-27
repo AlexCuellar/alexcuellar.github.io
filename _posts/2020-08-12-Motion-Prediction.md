@@ -28,7 +28,7 @@ This process leaves one question: how do I make a prediction of the person's sma
 ![Prediction](/assets/img/Human-Prediction/Prediction.JPG)
 <img src="/assets/img/Human-Prediction/Prediction.JPG"
      alt="Prediction"
-     style="float: center; margin-right: 10px; width: 1328px; height: 637px" />
+     style="float: center; margin-right: 10px; width: 1328px; height: 400px" />
      <!-- 1328 x 637 -->
 *Figure 2: 3D plot of the algorithm's prediction for a trajectory.  The blue points mark points in space for all previously observed trjectories.  The Green dots show the full ground truth trajectory we are attempting to predict.  The red dots make up the predicted trajectory. Notice that we do not start the prediction at the very beginning of the ground truth trajectory, but let the trajectory play out for several time-steps before beginning a prediction.*
 
