@@ -11,8 +11,7 @@ tags:
 
 ## Technical Writeup
 
-This post is intended to give a gneral idea of the project without too mcuh technical depth.  A more tehcnically in-depth paper describing the project can be found <a href = "assets\pdfs\human_prediction_writeup.pdf" target="_blank">PDF</a>. 
-
+This post is intended to give a gneral idea of the project without too mcuh technical depth.  A more tehcnically in-depth paper describing the project can be found [here](https://alexcuellar.github.io/assets/pdfs/human_prediction_writeup.pdf)
 ## Overview
 
 Since January, I have been working with the MIT Interaction lab, a research group working to solve various problems in the world of human-robot interaction.  Specifically, I am one part of a larger effort to develop a fully-integrated robotic system able to dynamically learn, predict, and avoid humans working in a shared space.  I work on the prediction side of the project, developing an algorithm able to predict a human's path through space given past data from others on a similar trajectory.  For example, the lab recently gathered data from participants walking around a map between 6 points with the task of moving various objects to a dropoff location.  
