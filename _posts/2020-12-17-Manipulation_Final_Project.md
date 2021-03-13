@@ -11,4 +11,4 @@ tags:
 
 ## Technical Writeup
 
-This work was the final project of the MIT class "Intelligent Robot Manipulation".  The writeup can be seen [here](https://alexcuellar.github.io/assets/pdfs/Manipulation_Writeup.pdf) and the video presentation can be seen here [here](https://youtu.be/5_PvdaBFkl0).
+This work was the final project of the MIT class "Intelligent Robot Manipulation".  The writeup can be seen [here](https://alexcuellar.github.io/assets/pdfs/Manipulation_Writeup.pdf) and the video presentation can be seen [here](https://youtu.be/5_PvdaBFkl0).
