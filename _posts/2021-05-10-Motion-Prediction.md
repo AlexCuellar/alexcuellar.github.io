@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Human Motion Prediction Algorithm (In Progress)
+title: Human Motion Prediction Algorithm
 excerpt: Developing an algorithm to predict human motion for Human Robot Interaction.<br><br>
 category:
   - Projects
