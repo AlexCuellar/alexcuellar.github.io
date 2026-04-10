@@ -1,5 +1,45 @@
----
-layout: index 
-title: Home
----
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name</title>
+    <meta name="description" content="Academic portfolio — replace in index.html and js/content.js." />
+    <link rel="icon" href="assets/profile.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme");
+          var root = document.documentElement;
+          if (t === "dark") root.classList.add("dark");
+          else if (t === "light") root.classList.remove("dark");
+          else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
+            root.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <img id="profile-img" class="profile-img" src="" alt="" width="180" height="180" />
+        <h1 id="site-name" class="site-name"></h1>
+        <div class="contact-block">
+          <p class="email-line" id="email-line"></p>
+          <p class="social-line" id="social-line"></p>
+        </div>
+        <div class="bio" id="bio"></div>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
+        <footer class="sidebar-footer" id="sidebar-footer"></footer>
+      </aside>
+      <main>
+        <h2 class="section-title">Publications</h2>
+        <div id="publications"></div>
+      </main>
+    </div>
+    <script src="js/content.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

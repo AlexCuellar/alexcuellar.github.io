@@ -1,0 +1,264 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #1a1a1a;
+  --text-muted: #5c5c5c;
+  --link: #1a5fb4;
+  --link-hover: #0d4a92;
+  --border: #e0e0e0;
+  --sidebar-width: min(320px, 100%);
+}
+
+html.dark {
+  --bg: #141414;
+  --text: #ececec;
+  --text-muted: #a8a8a8;
+  --link: #6eb3ff;
+  --link-hover: #9ccaff;
+  --border: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 2.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.site-name {
+  margin: 0 0 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.contact-block {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.contact-block .email-line {
+  margin: 0 0 0.35rem;
+}
+
+.contact-block .social-line {
+  margin: 0;
+}
+
+.contact-block .social-line a {
+  color: var(--link);
+}
+
+.contact-block .sep {
+  margin: 0 0.35rem;
+  color: var(--text-muted);
+}
+
+.bio {
+  font-size: 0.9rem;
+  color: var(--text);
+  flex: 1;
+}
+
+.bio p {
+  margin: 0 0 1rem;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+.theme-toggle {
+  margin-top: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--text) 6%, var(--bg));
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.sidebar-footer {
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.sidebar-footer a {
+  color: var(--text-muted);
+}
+
+.sidebar-footer a:hover {
+  color: var(--link);
+}
+
+main {
+  min-width: 0;
+  padding-top: 0.25rem;
+}
+
+.section-title {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.publication {
+  margin-bottom: 2.75rem;
+}
+
+.publication:last-child {
+  margin-bottom: 0;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.pub-authors {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.pub-authors em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.pub-links {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+}
+
+.pub-links a {
+  white-space: nowrap;
+}
+
+.pub-links .sep {
+  margin: 0 0.4rem;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+.pub-note {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.pub-note p {
+  margin: 0 0 0.5rem;
+}
+
+.pub-note p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 1.75rem;
+  }
+
+  .sidebar {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio {
+    text-align: left;
+    width: 100%;
+  }
+
+  .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .theme-toggle {
+    align-self: flex-start;
+  }
+
+  .sidebar-footer {
+    text-align: left;
+    width: 100%;
+  }
+}
