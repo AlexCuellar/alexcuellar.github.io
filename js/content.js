@@ -4,7 +4,7 @@
  */
 window.SITE_CONTENT = {
   /** Path or URL to your headshot (square image works best; shown in a circle). */
-  profileImage: "assets/profile.svg",
+  profileImage: "assets/Profile_Picture.jpg",
 
   /** Shown under the photo. */
   name: "Your Name",
@@ -14,24 +14,23 @@ window.SITE_CONTENT = {
    * Set emailMailto to "" to hide the mailto link wrapper.
    */
   email: {
-    display: "yourname [AT] university [DOT] edu",
-    mailto: "#",
+    display: "alexcuel [AT] mit [DOT] edu",
+    mailto: "alexcuel@mit.edu",
   },
 
   /** Navbar-style links under the email; use "#" until you have real URLs. */
   socialLinks: [
-    { label: "LinkedIn", href: "#" },
-    { label: "GitHub", href: "#" },
-    { label: "Twitter", href: "#" },
+    { label: "Google Scholar", href: "https://scholar.google.com/citations?user=L1XFuz0AAAAJ&hl=en" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/alex-cuellar-9b917a139" },
+    { label: "GitHub", href: "https://github.com/AlexCuellar" },
   ],
 
   /**
    * Bio paragraphs (HTML allowed for inline links). Replace with your story.
    */
   bioHtml: `
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Current role and <a href="#">affiliation link</a>.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Education and prior work with <a href="#">another lab</a> and collaborators.</p>
-    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Research interests include lorem, ipsum, and dolor sit amet.</p>
+    <p>I am a PhD student in MIT’s AeroAstro Department advised by Prof. Julie Shah with the <a href="https://interactive.mit.edu/">Interactive Robotics Group</a>. My research interests lie in enabling robots to act and react efficiently to humans in close-proximity interaction. I am currently exploring methods to leverage structure in repetitive tasks to allow robots to learn and adapt to individuals’ tenancies, preferences, and abilities online.</p>
+    <p>I completed my Master’s of Engineering with the MIT EECS department under Prof. Julie Shah (2022) and competed my BS with the MIT EECS department (2021). Outside of research, I enjoy hiking, cooking, and acting with local theater groups.</p>
   `,
 
   /** Small credit under the sidebar; HTML allowed. */
@@ -47,38 +46,55 @@ window.SITE_CONTENT = {
    */
   publications: [
     {
-      title: "Research Paper Title One",
+      title: "An Alignment-Based Approach to Learning Motions From Demonstrations",
       authors: [
-        { name: "Author One" },
-        { name: "Your Name", highlight: true },
-        { name: "Author Three" },
+        { name: "Alex Cuellar", highlight: true },
+        { name: "Christopher Fourie"},
+        { name: "Julie Shah" },
       ],
       links: [
-        { label: "Paper", href: "#" },
-        { label: "Website", href: "#" },
-        { label: "Code", href: "#" },
+        { label: "Paper", href: "https://arxiv.org/abs/2511.14988" },
+        { label: "Code", href: "https://github.com/AlexCuellar/CALM" },
       ],
-      noteHtml: "<p>This work was accepted at Example Conference 20XX. <a href=\"#\">Oral presentation</a>.</p>",
+      noteHtml: "<p>This work was accepted for publication in the September 2025 edition of RA-L and will be presented at ICRA26",
     },
     {
-      title: "Research Paper Title Two",
+      title: "Inference of Human-derived Specifications of Object Placement via Demonstration",
       authors: [
-        { name: "Author Alpha" },
-        { name: "Author Beta" },
-        { name: "Your Name", highlight: true },
+        { name: "Alex Cuellar", highlight: true },
+        { name: "Hosea Siu" },
+        { name: "Julie Shah"},
       ],
       links: [
-        { label: "Paper", href: "#" },
-        { label: "Models", href: "#" },
-        { label: "Colab", href: "#" },
+        { label: "Paper", href: "https://www.ijcai.org/proceedings/2025/0460.pdf" },
+        { label: "Code", href: "https://github.com/AlexCuellar/PARCC" },
       ],
-      noteHtml: "<p>Featured in the annual <a href=\"#\">State of AI</a> report.</p>",
+      noteHtml: "<p>This was presented at IJCAI25.</p>",
     },
     {
-      title: "Research Paper Title Three",
-      authors: [{ name: "Your Name", highlight: true }, { name: "Author Two" }],
-      links: [{ label: "Paper", href: "#" }],
+      title: "Automation from the Worker's Perspective",
+      authors: [{ name: "Ben Armstrong"}, 
+                { name: "Valerie K Chen" },
+                { name: "Alex Cuellar", highlight: true },
+                {name: "Alexandra Forsey-Smerek"},
+                {name: "Julie A Shah"},
+              ],
+                
+      links: [{ label: "Paper", href: "https://arxiv.org/pdf/2409.20387" }],
       noteHtml: "",
+    },
+    {
+      title: "Fair contextual multi-armed bandits: Theory and experiments",
+      authors: [{name: "Yifang Chen"}, 
+                {name: "Alex Cuellar", highlight: true },
+                {name: "Haipeng Luo"},
+                {name: "Jignesh Modi"},
+                {name: "Heramb Nemlekar"},
+                {name: "Stefanos Nikolaidis"},
+              ],
+                
+      links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" }],
+      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>",
     },
   ],
 };

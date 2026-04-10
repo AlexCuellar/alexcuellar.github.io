@@ -15,7 +15,7 @@ This repo includes a `.nojekyll` file so GitHub Pages serves the site as plain H
 
 | What you want to change | Property / location |
 |-------------------------|---------------------|
-| Profile photo | `profileImage` — path or URL to an image (JPEG/PNG/WebP/SVG). Replace `assets/profile.svg` with your file, or point to an external URL. |
+| Profile photo | `profileImage` — path or URL to an image (JPEG/PNG/WebP/SVG). Replace `assets/Profile_Picture.jpg` with your file, or point to an external URL. |
 | Name under the photo | `name` |
 | Email line (obfuscated text) | `email.display` — e.g. `you [AT] school [DOT] edu` |
 | Clickable email | `email.mailto` — use `mailto:you@school.edu`. Set to `""` (empty string) to show text only, with no link. |
@@ -58,7 +58,7 @@ css/style.css       # Visual design
 js/content.js       # ← All copy and hrefs (start here)
 js/main.js          # Renders content into the page
 js/theme.js         # Dark / light toggle
-assets/profile.svg  # Placeholder avatar; replace or change path in content.js
+assets/Profile_Picture.jpg  # Placeholder avatar; replace or change path in content.js
 .nojekyll           # Tells GitHub Pages not to run Jekyll
 404.html            # Simple not-found page
 ```
