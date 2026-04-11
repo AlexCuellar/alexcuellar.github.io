@@ -29,7 +29,7 @@ window.SITE_CONTENT = {
    * Bio paragraphs (HTML allowed for inline links). Replace with your story.
    */
   bioHtml: `
-    <p>I am a PhD asdfasdfstudent in MIT’s AeroAstro Department advised by Prof. Julie Shah with the <a href="https://interactive.mit.edu/">Interactive Robotics Group</a>. My research interests lie in enabling robots to act and react efficiently to humans in close-proximity interaction. I am currently exploring methods to leverage structure in repetitive tasks to allow robots to learn and adapt to individuals’ tenancies, preferences, and abilities online.</p>
+    <p>I am a PhD student in MIT’s AeroAstro Department advised by Prof. Julie Shah with the <a href="https://interactive.mit.edu/">Interactive Robotics Group</a>. My research interests lie in enabling robots to act and react efficiently to humans in close-proximity interaction. I am currently exploring methods to leverage structure in repetitive tasks to allow robots to learn and adapt to individuals’ tenancies, preferences, and abilities online.</p>
     <p>I completed my Master’s of Engineering with the MIT EECS department under Prof. Julie Shah (2022) and competed my BS with the MIT EECS department (2021). Outside of research, I enjoy hiking, cooking, and acting with local theater groups.</p>
   `,
 
@@ -94,7 +94,8 @@ window.SITE_CONTENT = {
               ],
                 
       links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" }],
-      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>",
+      noteHtml: `<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>1
+                 <p>All authors listed alphabetically.<p/>,
     },
   ],
 };
