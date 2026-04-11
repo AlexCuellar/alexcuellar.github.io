@@ -69,7 +69,7 @@ window.SITE_CONTENT = {
         { label: "Paper", href: "https://www.ijcai.org/proceedings/2025/0460.pdf" },
         { label: "Code", href: "https://github.com/AlexCuellar/PARCC" },
       ],
-      noteHtml: "<p>This was presented at IJCAI25.</p>",
+      noteHtml: "<p>This paper was presented at IJCAI25 and the IJCAI 2025 Workshop on User-Aligned Assessment of Adaptive AI Systems.</p>",
     },
     {
       title: "Automation from the Worker's Perspective",
@@ -93,8 +93,10 @@ window.SITE_CONTENT = {
                 {name: "Stefanos Nikolaidis"},
               ],
                 
-      links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" }],
-      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>",
+      links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" },
+              { label: "User Study Dataset", href: "https://github.com/icaros-usc/fairCB-dataset"}
+      ],
+      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020. \n All authors listed alphabetically.</p>",
     },
   ],
 };
