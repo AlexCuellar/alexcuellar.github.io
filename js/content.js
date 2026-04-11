@@ -94,8 +94,7 @@ window.SITE_CONTENT = {
               ],
                 
       links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" }],
-      noteHtml: `<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>1
-                 <p>All authors listed alphabetically.<p/>,
+      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020.</p>",
     },
   ],
 };
