@@ -29,8 +29,8 @@ window.SITE_CONTENT = {
    * Bio paragraphs (HTML allowed for inline links). Replace with your story.
    */
   bioHtml: `
-    <p>I am a PhD student in MIT’s AeroAstro Department advised by Prof. Julie Shah with the <a href="https://interactive.mit.edu/">Interactive Robotics Group</a>. My research interests lie in enabling robots to act and react efficiently to humans in close-proximity interaction. I am currently exploring methods to leverage structure in repetitive tasks to allow robots to learn and adapt to individuals’ tenancies, preferences, and abilities online.</p>
-    <p>I completed my Master’s of Engineering with the MIT EECS department under Prof. Julie Shah (2022) and competed my BS with the MIT EECS department (2021). Outside of research, I enjoy hiking, cooking, and acting with local theater groups.</p>
+    <p>I am a PhD candidate at MIT's <a href="https://interactive.mit.edu/">Interactive Robotics Group</a> advised by Julie Shah. My research focuses on enabling robots to act and react efficiently to humans in close-proximity interaction. I explore methods that leverage multiple cycles of an interaction to personalize robot plans according to individuals' tendencies, abilities, and preferences.</p>
+    <p>I completed my Master's of Engineering with the MIT EECS department under Prof. Julie Shah (2022) and competed my BS with the MIT EECS department (2021). Outside of research, I enjoy hiking, cooking, and acting with local theater groups.</p>
   `,
 
   /** Small credit under the sidebar; HTML allowed. */
@@ -46,6 +46,19 @@ window.SITE_CONTENT = {
    */
   publications: [
     {
+      title: "Exploring Roles for Radiation Safety Robots in Medical Facilities",
+      authors: [
+        { name: "Claire Liang"},
+        { name: "Alex Cuellar", highlight: true },
+        { name: "Naomi Schurr" },
+        { name: "Julie Shah"}
+      ],
+      links: [
+        { label: "Paper", href: "https://healthrobotsworkshop.github.io/assets/pdf/papers/6_Liang_paper.pdf" },
+      ],
+      noteHtml: "<p>This work was presented at the HRI Robots for Care Workshop.",
+    },
+    {
       title: "An Alignment-Based Approach to Learning Motions From Demonstrations",
       authors: [
         { name: "Alex Cuellar", highlight: true },
@@ -56,7 +69,7 @@ window.SITE_CONTENT = {
         { label: "Paper", href: "https://arxiv.org/abs/2511.14988" },
         { label: "Code", href: "https://github.com/AlexCuellar/CALM" },
       ],
-      noteHtml: "<p>This work was accepted for publication in the September 2025 edition of RA-L and will be presented at ICRA26",
+      noteHtml: "<p>This work was accepted for publication in the September 2025 edition of RA-L and will be presented at ICRA26.",
     },
     {
       title: "Inference of Human-derived Specifications of Object Placement via Demonstration",
@@ -81,11 +94,11 @@ window.SITE_CONTENT = {
               ],
                 
       links: [{ label: "Paper", href: "https://arxiv.org/pdf/2409.20387" }],
-      noteHtml: "",
+      noteHtml: "A whitepaper discussing the design and results of a survey of 5000 workers' perspective on automation.",
     },
     {
       title: "Fair contextual multi-armed bandits: Theory and experiments",
-      authors: [{name: "Yifang Chen"}, 
+      authors: [{name: "*Yifang Chen"}, 
                 {name: "Alex Cuellar", highlight: true },
                 {name: "Haipeng Luo"},
                 {name: "Jignesh Modi"},
@@ -96,7 +109,7 @@ window.SITE_CONTENT = {
       links: [{ label: "Paper", href: "https://proceedings.mlr.press/v124/chen20a/chen20a.pdf" },
               { label: "User Study Dataset", href: "https://github.com/icaros-usc/fairCB-dataset"}
       ],
-      noteHtml: "<p>This was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020. \n All authors listed alphabetically.</p>",
+      noteHtml: "<p>This work was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020. \n *All authors listed alphabetically.</p>",
     },
   ],
 };
