@@ -46,6 +46,19 @@ window.SITE_CONTENT = {
    */
   publications: [
     {
+      title: "Multi-Cycle Spatio-Temporal Adaptation in Human-Robot Teaming",
+      authors: [
+        { name: "Alex Cuellar", highlight: true },
+        { name: "Michael Hagenow"},
+        { name: "Julie Shah"}
+      ],
+      links: [
+        { label: "Paper", href: "https://arxiv.org/pdf/2604.19670" },
+        { label: "Code", href: "https://github.com/AlexCuellar/RAPIDDS" },
+      ],
+      noteHtml: "<p>This work has been submitted to RA-L.",
+    },
+    {
       title: "Exploring Roles for Radiation Safety Robots in Medical Facilities",
       authors: [
         { name: "Claire Liang"},
