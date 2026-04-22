@@ -3,26 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>Your Name</title>
     <meta name="description" content="Academic portfolio — replace in index.html and js/content.js." />
-    <link rel="icon" href="assets/Profile_Picture.jpg" type="image/svg+xml" />
+    <link rel="icon" href="assets/Profile_Picture.jpg" type="image/jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
     <script>
       (function () {
         try {
-          var t = localStorage.getItem("portfolio-theme");
           var root = document.documentElement;
-          if (t === "dark") root.classList.add("dark");
-          else if (t === "light") root.classList.remove("dark");
-          else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)
-            root.classList.add("dark");
+          var nk = "minimal-dark-mode";
+          var old = localStorage.getItem("portfolio-theme");
+          if (old === "dark") {
+            root.classList.add("theme-dark");
+            localStorage.setItem(nk, "true");
+            localStorage.removeItem("portfolio-theme");
+          } else if (old === "light") {
+            root.classList.remove("theme-dark");
+            localStorage.setItem(nk, "false");
+            localStorage.removeItem("portfolio-theme");
+          } else {
+            var v = localStorage.getItem(nk);
+            if (v !== null) {
+              if (JSON.parse(v) === true) root.classList.add("theme-dark");
+            } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+              root.classList.add("theme-dark");
+            }
+          }
         } catch (e) {}
       })();
     </script>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/theme.js"></script>
   </head>
   <body>
-    <div class="layout">
-      <aside class="sidebar">
+    <div class="wrapper">
+      <header>
         <img id="profile-img" class="profile-img" src="" alt="" width="180" height="180" />
         <h1 id="site-name" class="site-name"></h1>
         <div class="contact-block">
@@ -30,16 +49,35 @@
           <p class="social-line" id="social-line"></p>
         </div>
         <div class="bio" id="bio"></div>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme"></button>
-        <footer class="sidebar-footer" id="sidebar-footer"></footer>
-      </aside>
-      <main>
+      </header>
+      <section>
         <h2 class="section-title">Publications</h2>
         <div id="publications"></div>
-      </main>
+
+        <div class="cv-section" id="block-awards" hidden>
+          <h2 class="section-title">Awards</h2>
+          <div id="awards"></div>
+        </div>
+
+        <div class="cv-section" id="block-service" hidden>
+          <h2 class="section-title">Service</h2>
+          <div id="service"></div>
+        </div>
+
+        <div class="cv-section" id="block-education" hidden>
+          <h2 class="section-title">Education</h2>
+          <div id="education"></div>
+        </div>
+      </section>
+      <footer>
+        <p>
+          <button type="button" class="material-symbols-sharp theme-icon-button" id="theme-toggle"></button>
+        </p>
+        <div class="site-footer-meta" id="sidebar-footer"></div>
+      </footer>
     </div>
     <script src="js/content.js"></script>
-    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/scale.fix.js"></script>
   </body>
 </html>

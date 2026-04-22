@@ -3,15 +3,60 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>Page not found</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <script>
+      (function () {
+        try {
+          var root = document.documentElement;
+          var nk = "minimal-dark-mode";
+          var v = localStorage.getItem(nk);
+          if (v !== null) {
+            if (JSON.parse(v) === true) root.classList.add("theme-dark");
+          } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            root.classList.add("theme-dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="layout" style="grid-template-columns: 1fr; max-width: 40rem">
-      <main>
-        <h1 class="section-title" style="text-align: left">404: Page not found</h1>
+    <div class="wrapper">
+      <section style="width: auto; float: none; max-width: 40rem; margin: 0 auto">
+        <h1 class="section-title" style="margin-bottom: 16px">404: Page not found</h1>
         <p class="pub-note">That URL does not exist. <a href="/">Back to home</a>.</p>
-      </main>
+        <p>
+          <button type="button" class="material-symbols-sharp theme-icon-button" id="theme-toggle-404"></button>
+        </p>
+      </section>
     </div>
+    <script>
+      (function () {
+        var btn = document.getElementById("theme-toggle-404");
+        if (!btn) return;
+        function sync() {
+          var dark = document.documentElement.classList.contains("theme-dark");
+          btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+          btn.setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+        }
+        sync();
+        btn.addEventListener("click", function () {
+          document.documentElement.classList.toggle("theme-dark");
+          try {
+            localStorage.setItem(
+              "minimal-dark-mode",
+              JSON.stringify(document.documentElement.classList.contains("theme-dark"))
+            );
+          } catch (e) {}
+          sync();
+        });
+      })();
+    </script>
+    <script src="/js/scale.fix.js"></script>
   </body>
 </html>

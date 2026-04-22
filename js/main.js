@@ -14,6 +14,49 @@
       .join(", ");
   }
 
+  function renderCvEntry(entry) {
+    var parts =
+      '<div class="cv-entry">' +
+      '<h3 class="cv-heading">' +
+      escapeHtml(entry.heading) +
+      "</h3>";
+    if (entry.emphasisLine) {
+      parts +=
+        '<p class="cv-emphasis"><strong><em>' +
+        escapeHtml(entry.emphasisLine) +
+        "</em></strong></p>";
+    }
+    if (entry.details && entry.details.length) {
+      parts +=
+        '<ul class="cv-bullets">' +
+        entry.details
+          .map(function (d) {
+            return "<li>" + escapeHtml(d) + "</li>";
+          })
+          .join("") +
+        "</ul>";
+    }
+    parts += "</div>";
+    return parts;
+  }
+
+  function renderServiceCategory(cat) {
+    var items = (cat.items || [])
+      .map(function (it) {
+        var html = typeof it === "string" ? it : it.html;
+        return "<li>" + html + "</li>";
+      })
+      .join("");
+    return (
+      '<div class="service-category">' +
+      '<h3 class="service-category-title">' +
+      escapeHtml(cat.category) +
+      "</h3>" +
+      (items ? '<ul class="cv-bullets service-items">' + items + "</ul>" : "") +
+      "</div>"
+    );
+  }
+
   function renderPublication(pub) {
     var linksHtml = pub.links
       .map(function (l, i) {
@@ -91,5 +134,66 @@
     if (list && c.publications) {
       list.innerHTML = c.publications.map(renderPublication).join("");
     }
+
+    function sectionHasContent(arr) {
+      return Array.isArray(arr) && arr.length > 0;
+    }
+
+    function setCvBlock(blockId, innerId, visible, html) {
+      var block = document.getElementById(blockId);
+      var inner = document.getElementById(innerId);
+      if (!block) return;
+      if (visible) {
+        block.hidden = false;
+        if (inner) inner.innerHTML = html;
+      } else {
+        block.hidden = true;
+        if (inner) inner.innerHTML = "";
+      }
+    }
+
+    var awards = c.awards;
+    setCvBlock(
+      "block-awards",
+      "awards",
+      sectionHasContent(awards),
+      sectionHasContent(awards)
+        ? awards
+            .map(function (a) {
+              return renderCvEntry({
+                heading: a.title,
+                emphasisLine: a.subtitle || "",
+                details: a.details || [],
+              });
+            })
+            .join("")
+        : ""
+    );
+
+    var service = c.service;
+    setCvBlock(
+      "block-service",
+      "service",
+      sectionHasContent(service),
+      sectionHasContent(service) ? service.map(renderServiceCategory).join("") : ""
+    );
+
+    var education = c.education;
+    setCvBlock(
+      "block-education",
+      "education",
+      sectionHasContent(education),
+      sectionHasContent(education)
+        ? education
+            .map(function (e) {
+              return renderCvEntry({
+                heading: e.institution,
+                emphasisLine: e.degreeLine || "",
+                details: e.details || [],
+              });
+            })
+            .join("")
+        : ""
+    );
   });
 })();

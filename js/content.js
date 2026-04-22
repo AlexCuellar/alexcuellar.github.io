@@ -56,7 +56,7 @@ window.SITE_CONTENT = {
       links: [
         { label: "Paper", href: "https://healthrobotsworkshop.github.io/assets/pdf/papers/6_Liang_paper.pdf" },
       ],
-      noteHtml: "<p>This work was presented at the HRI Robots for Care Workshop.",
+      noteHtml: "<p>This work was presented at the 2026 HRI Robots for Care Workshop.",
     },
     {
       title: "An Alignment-Based Approach to Learning Motions From Demonstrations",
@@ -110,6 +110,59 @@ window.SITE_CONTENT = {
               { label: "User Study Dataset", href: "https://github.com/icaros-usc/fairCB-dataset"}
       ],
       noteHtml: "<p>This work was presented at UAI 2020, and as an <a href='https://ifaamas.org/Proceedings/aamas2020/pdfs/p1810.pdf'>extended abstract</a> at AAMAS 2020. \n *All authors listed alphabetically.</p>",
+    },
+  ],
+
+  /**
+   * Awards — same visual pattern as Education: title, optional subtitle line (bold+italic), then bullets.
+   * Use [] to hide the Awards block.
+   */
+  service: [
+    {
+      items: [
+        "Served as Workflow Chair for <a href='https://aaai.org/conference/aaai/aaai-25/conference-organizers/'>AAAI 2025</a>.",
+      ],
+    },
+  ],
+
+  /**
+   * Service — grouped like “Organizing and Service”: each object has category (bold subheading) and items.
+   * Each item string may include HTML for links (same trust model as bioHtml). Use [] to hide the section.
+   */
+  awards: [
+    {
+      title: "MIT AeroAstro Distinguished Scholar Program",
+      details: [
+        '5 years guaranteed funding for PhD studies and discretionary funding for travel and materials (2022-2027 academic years).',
+      ],
+    },
+    {
+      title: "MIT Lemelson Fellowship",
+      details: [
+        'One year of guaranteed funding for PhD studies (2022-2023 academic year).',
+      ],
+    },
+  ],
+
+  /**
+   * Education — institution name, degree line (shown bold+italic), optional detail bullets (plain text).
+   * Use [] to hide the section.
+   */
+  education: [
+    {
+      institution: "Massachusetts Institute of Technology",
+      degreeLine: "Ph.D. — Electrical Engineering & Computer Science (2022 – Present)",
+      details: ["Interactive Robotics Group, advised by Julie Shah"],
+    },
+    {
+      institution: "Massachusetts Institute of Technology",
+      degreeLine: "M.Eng. — Electrical Engineering & Computer Science (2022)",
+      details: ["MIT EECS, advised by Julie Shah"],
+    },
+    {
+      institution: "Massachusetts Institute of Technology",
+      degreeLine: "S.B. — Electrical Engineering & Computer Science (2021)",
+      details: [],
     },
   ],
 };
