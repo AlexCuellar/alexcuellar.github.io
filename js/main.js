@@ -14,6 +14,43 @@
       .join(", ");
   }
 
+  function renderCvDetailBullet(d) {
+    if (d === null || d === undefined) {
+      return "<li></li>";
+    }
+    if (typeof d === "string") {
+      return "<li>" + escapeHtml(d) + "</li>";
+    }
+    if (typeof d === "object") {
+      if (Array.isArray(d)) {
+        return "<li>" + escapeHtml(d.join(", ")) + "</li>";
+      }
+      var raw =
+        d.html != null && d.html !== ""
+          ? String(d.html)
+          : d.HTML != null && d.HTML !== ""
+            ? String(d.HTML)
+            : null;
+      if (raw !== null) {
+        return "<li>" + raw + "</li>";
+      }
+      if (typeof d.text === "string") {
+        return "<li>" + escapeHtml(d.text) + "</li>";
+      }
+      if (typeof d.href === "string" && d.label != null) {
+        return (
+          "<li><a href=\"" +
+          escapeHtml(d.href) +
+          "\">" +
+          escapeHtml(String(d.label)) +
+          "</a></li>"
+        );
+      }
+      return "<li></li>";
+    }
+    return "<li>" + escapeHtml(String(d)) + "</li>";
+  }
+
   function renderCvEntry(entry) {
     var parts =
       '<div class="cv-entry">' +
@@ -21,19 +58,23 @@
       escapeHtml(entry.heading) +
       "</h3>";
     if (entry.emphasisLine) {
+      var emRaw =
+        typeof entry.emphasisLine === "object" &&
+        entry.emphasisLine !== null &&
+        entry.emphasisLine.html != null
+          ? String(entry.emphasisLine.html)
+          : escapeHtml(
+              typeof entry.emphasisLine === "string"
+                ? entry.emphasisLine
+                : String(entry.emphasisLine)
+            );
       parts +=
-        '<p class="cv-emphasis"><strong><em>' +
-        escapeHtml(entry.emphasisLine) +
-        "</em></strong></p>";
+        '<p class="cv-emphasis"><strong><em>' + emRaw + "</em></strong></p>";
     }
     if (entry.details && entry.details.length) {
       parts +=
         '<ul class="cv-bullets">' +
-        entry.details
-          .map(function (d) {
-            return "<li>" + escapeHtml(d) + "</li>";
-          })
-          .join("") +
+        entry.details.map(renderCvDetailBullet).join("") +
         "</ul>";
     }
     parts += "</div>";

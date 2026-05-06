@@ -127,20 +127,8 @@ window.SITE_CONTENT = {
   ],
 
   /**
-   * Awards — same visual pattern as Education: title, optional subtitle line (bold+italic), then bullets.
+   * Awards — title, optional subtitle (bold+italic), bullets. Strings are escaped; use { html: "..." } for links.
    * Use [] to hide the Awards block.
-   */
-  service: [
-    {
-      items: [
-        "Served as Workflow Chair for <a href='https://aaai.org/conference/aaai/aaai-25/conference-organizers/'>AAAI 2025</a>.",
-      ],
-    },
-  ],
-
-  /**
-   * Service — grouped like “Organizing and Service”: each object has category (bold subheading) and items.
-   * Each item string may include HTML for links (same trust model as bioHtml). Use [] to hide the section.
    */
   awards: [
     {
@@ -158,7 +146,20 @@ window.SITE_CONTENT = {
   ],
 
   /**
-   * Education — institution name, degree line (shown bold+italic), optional detail bullets (plain text).
+   * Service — category subheading + items (HTML allowed in item strings for links).
+   * Use [] to hide the section.
+   */
+  service: [
+    {
+      category: "Conferences",
+      items: [
+        "Served as Workflow Chair for <a href='https://aaai.org/conference/aaai/aaai-25/conference-organizers/'>AAAI 2025</a>.",
+      ],
+    },
+  ],
+
+  /**
+   * Education — institution, degree line (bold+italic), bullets (plain strings escaped, or { html } for links).
    * Use [] to hide the section.
    */
   education: [
@@ -170,7 +171,13 @@ window.SITE_CONTENT = {
     {
       institution: "Massachusetts Institute of Technology",
       degreeLine: "M.Eng. — Electrical Engineering & Computer Science (2022)",
-      details: ["MIT EECS, advised by Julie Shah"],
+      details: [
+        "MIT EECS, advised by Julie Shah",
+        {
+          html:
+            'Thesis: <a href="https://dspace.mit.edu/bitstream/handle/1721.1/147491/Cuellar-alexcuel-meng-eecs-2022-thesis.pdf?sequence=1&amp;isAllowed=y">Inference and Task Planning over Spatially Complex Problems</a>.',
+        },
+      ],
     },
     {
       institution: "Massachusetts Institute of Technology",

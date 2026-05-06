@@ -415,7 +415,8 @@ section {
   color: var(--on-surface);
 }
 
-.service-items a {
+.service-items a,
+.cv-bullets a {
   color: var(--primary);
 }
 
